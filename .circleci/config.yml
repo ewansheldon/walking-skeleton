@@ -1,15 +1,9 @@
 version: 2.1
-jobs:
-  test:
-    working_directory: ~/app
-    docker:
-      - image: circleci/openjdk:11-stretch-node
-    steps:
-      - checkout
-      - run: mvn test
+
+orbs:
+  maven: circleci/maven@0.0.12
 
 workflows:
-  version: 2
-  build:
+  maven_test:
     jobs:
-      - test
+      - maven/test # checkout, build, test, and upload test results
