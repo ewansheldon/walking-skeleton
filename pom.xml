@@ -12,6 +12,7 @@
     <groupId>org.example</groupId>
     <artifactId>my-walking-skeleton</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <dependencies>
         <dependency>
             <groupId>io.rest-assured</groupId>
