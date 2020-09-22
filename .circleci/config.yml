@@ -1,0 +1,15 @@
+version: 2.1
+jobs:
+  test:
+    working_directory: ~/app
+    docker:
+      - image: circleci/openjdk:11-stretch-node
+    steps:
+      - checkout
+      - run: mvn test
+
+workflows:
+  version: 2
+  build:
+    jobs:
+      - test
