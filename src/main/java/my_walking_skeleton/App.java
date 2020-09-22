@@ -1,3 +1,5 @@
+package my_walking_skeleton;
+
 import spark.Spark;
 
 import static spark.Spark.get;

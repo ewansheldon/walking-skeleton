@@ -12,7 +12,23 @@
     <groupId>org.example</groupId>
     <artifactId>my-walking-skeleton</artifactId>
     <version>1.0-SNAPSHOT</version>
-
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>my_walking_skeleton</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <dependencies>
         <dependency>
             <groupId>io.rest-assured</groupId>
