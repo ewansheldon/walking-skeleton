@@ -15,11 +15,21 @@
     <build>
         <plugins>
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>my_walking_skeleton</mainClass>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>my_walking_skeleton.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
