@@ -1,0 +1,1 @@
+web: java -jar target/my-walking-skeleton-1.0-SNAPSHOT.jar
