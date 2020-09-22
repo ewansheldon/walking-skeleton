@@ -12,7 +12,6 @@ public class App {
 
         get("/", (req, res) -> "hello world");
         get("/ewan", (req, res) -> "hello ewan");
-        get("/tom", (req, res) -> "hello to tom");
         get("/:name", (req, res) -> String.format("hello %s", req.params("name")));
     }
 
